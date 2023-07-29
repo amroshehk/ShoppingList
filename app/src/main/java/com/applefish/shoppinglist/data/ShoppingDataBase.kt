@@ -1,9 +1,10 @@
-package com.applefish.shoppinglist
+package com.applefish.shoppinglist.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.applefish.shoppinglist.data.db.entities.ShoppingItem
 
 @Database(
     entities = [ShoppingItem::class],
@@ -14,7 +15,7 @@ abstract class ShoppingDataBase : RoomDatabase() {
 
     companion object {
         @Volatile
-        private var instance :ShoppingDataBase? = null
+        private var instance : ShoppingDataBase? = null
         private var Lock = Any()
 
         operator fun invoke(context: Context) = instance ?:

@@ -1,4 +1,4 @@
-package com.applefish.shoppinglist
+package com.applefish.shoppinglist.data.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
